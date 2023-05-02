@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ice-cream</title>
+    <link rel="icon" href="./icons8-moon-48.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css.css" />
+  </head>
+  <body>
+    <section class="sec">
+      <header>
+        <a href="#"><img src="./logo.png" class="logo" /></a>
+        <div class="toggleMenu" onclick="menuToggle();"></div>
+        <ul class="navigation">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">What's New</a></li>
+          <li><a href="#">Newsletter</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </header>
+
+      <div class="content">
+        <div class="textBox">
+          <h2>That's What <br /><span>I like</span></h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            soluta dolore dolorum, rerum neque obcaecati hic cum labore,
+            inventore illo vel voluptatum? Itaque modi non nemo repudiandae at
+            neque temporibus.
+          </p>
+          <a href="#">View All Products</a>
+        </div>
+        <div class="ingBox">
+          <img
+            src="./kisspng-chocolate-ice-cream-strawberry-ice-cream-ice-cream-ice-cream-5a8543a8f1b1a1.48425062151868304899.png"
+            class="pepsi"
+          />
+        </div>
+      </div>
+      <ul class="thumb">
+        <li>
+          <img
+            src="./kisspng-chocolate-ice-cream-strawberry-ice-cream-ice-cream-ice-cream-5a8543a8f1b1a1.48425062151868304899.png"
+            onclick="ingSlider('kisspng-chocolate-ice-cream-strawberry-ice-cream-ice-cream-ice-cream-5a8543a8f1b1a1.48425062151868304899.png')
+          ;changeBgColor('#0062be')"
+          />
+        </li>
+        <li>
+          <img
+            src="./kisspng-green-tea-ice-cream-coffee-ice-cream-cake-vanilla-5ac7ac41822fd6.1458083815230352015333.png"
+            onclick="ingSlider('./kisspng-green-tea-ice-cream-coffee-ice-cream-cake-vanilla-5ac7ac41822fd6.1458083815230352015333.png');changeBgColor('#e60c2c')"
+          />
+        </li>
+        <li>
+          <img
+            src="./kisspng-ice-cream-cones-neapolitan-ice-cream-breyers-ice-c-vanilla-ice-cream-5ade76f7059ce5.822581161524528887023.png"
+            onclick="ingSlider('./kisspng-ice-cream-cones-neapolitan-ice-cream-breyers-ice-c-vanilla-ice-cream-5ade76f7059ce5.822581161524528887023.png');changeBgColor('#1e1e1e')"
+          />
+        </li>
+      </ul>
+      <ul class="sci">
+        <li>
+          <a href="#"><img src="./facebook.png" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./twitter.png" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./instagram.png" /></a>
+        </li>
+      </ul>
+    </section>
+    <script type="text/javascript">
+      function ingSlider(anything) {
+        document.querySelector(".pepsi").src = anything;
+      }
+      function changeBgColor(color) {
+        const sec = document.querySelector(".sec");
+        sec.style.background = color;
+      }
+      function menuToggle() {
+        const toggleMenu = document.querySelector(".toggleMenu");
+        const navigation = document.querySelector(".navigation");
+        toggleMenu.classList.toggle("active");
+        navigation.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
